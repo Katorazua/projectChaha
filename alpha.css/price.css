@@ -1,0 +1,163 @@
+    /* General Styles */
+    .modal {
+        max-width: 800px;
+        margin: 80px auto;
+        padding: 20px;
+        background: #f1f1f1;
+        border-radius: 5px;
+        box-shadow: 3px 2px #ccc;
+      }
+  
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #222;
+      }
+  
+      .form-group {
+        margin-bottom: 20px;
+      }
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+  
+      select[type="select"],
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #008374;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+  
+      .radio-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+  
+      .radio-group input[type="radio"] {
+        margin-right: 10px;
+      }
+  
+      button[type="submit"] {
+        background-color: #008374;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      a{
+        background-color: #ccc;
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+  
+      button[type="submit"]:hover {
+        background-color: #00655a;
+      }
+  
+      /* Media Queries */
+      @media (max-width: 767px) { /* Mobile Devices */
+        .modal {
+          max-width: 100%;
+          margin: 20px;
+          padding: 10px;
+        }
+  
+        form {
+          max-width: 100%;
+          padding: 10px;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          padding: 8px;
+        }
+  
+        button[type="submit"] {
+          padding: 8px 16px;
+        }
+      }
+  
+      @media (min-width: 768px) and (max-width: 1199px) { /* Tablet Devices */
+        .modal {
+          max-width: 700px;
+          margin: 50px auto;
+          padding: 15px;
+        }
+  
+        form {
+          max-width: 700px;
+          padding: 15px;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          padding: 9px;
+        }
+  
+        button[type="submit"] {
+          padding: 9px 18px;
+        }
+      }
+  
+      @media (min-width: 1200px) { /* Desktop Devices */
+        .modal {
+          max-width: 800px;
+          margin: 80px auto;
+          padding: 20px;
+        }
+  
+        form {
+          max-width: 800px;
+          padding: 20px;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          padding: 10px;
+        }
+  
+        button[type="submit"] {
+          padding: 10px 20px;
+        }
+      }
+  
+          /*  return message */
+          .alert_message {
+              /* background: crimson; */
+              padding: 0.8rem 1.4rem;
+              margin-bottom: 1rem;
+              border-radius: 5px;
+          }
+  
+          .alert_message.error {
+              background: crimson;
+              color: #fff;
+          }
+  
+          .alert_message.success {
+              background: #008374;
+              color: #fff;
+          }
+  
+          .alert_message.lg {
+              text-align: center;
+          }
+              /*  End return message */
