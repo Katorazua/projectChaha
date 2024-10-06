@@ -1,0 +1,35 @@
+<?php
+require '../config/database.php';
+
+if (isset($_GET['id'])) {
+    $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+
+    // fetch post from database in order to delete avatar from images
+    $query = "SELECT * FROM doc_transfer WHERE id = $id";
+    $result = mysqli_query($connection, $query);
+    $user = mysqli_fetch_assoc($result);
+
+    // make sure only 1 record/post was fetched
+    if (mysqli_num_rows($result) == 1) {
+        $post = mysqli_fetch_assoc($result);
+        $avatar_name = $post['avatar'];
+        $avatar_path = '../images/' . $avatar_name;
+
+        if ($avatar_path) {
+            unlink($avatar_path);
+
+            // delete post from database
+            $delete_post_query = "DELETE FROM doc_transfer WHERE id=$id LIMIT 1";
+            $delete_post_result = mysqli_query($connection, $delete_post_query);
+
+            if (mysqli_errno($connection)) {
+                $_SESSION['delete-user'] = "Unable to delete Dr {$user['firstname']} {$user['lastname']}";
+            } else {
+                $_SESSION['delete-user-success'] = "Dr. {$user['firstname']} {$user['lastname']} deleted successfully";
+            }
+        }
+    }
+}
+
+header('location:' .ROOT_URL. 'superAdmin/history.php');
+die();
