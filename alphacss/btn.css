@@ -1,0 +1,60 @@
+    /*--------------------------------------------------------------
+    # Disable aos animation delay on mobile devices
+    --------------------------------------------------------------*/
+
+    /* -------- Dashboard btn ---------- */
+    .btn.sm {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.3rem 0.7rem;
+    background-color: #0ab3abc2;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    color: #fff;
+    font-size: 0.8rem;
+    }
+
+    .btn.danger {
+    background: #da1d00;
+    }
+
+    .btn.view {
+    background: #4154f1;
+    }
+
+    .btn.sm:hover {
+    background-color: #33c0f8;
+    }
+
+    .btn.danger:hover {
+    background-color: crimson;
+    }
+
+    .btn.view:hover {
+    background-color: #33c0f8;
+    }
+    /*  End btn */
+
+    /*  return message */
+    .alert_message {
+    /* background: crimson; */
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    }
+
+    .alert_message.error {
+    background: crimson;
+    color: #fff;
+    }
+
+    .alert_message.success {
+    background: #008374;
+    color: #fff;
+    }
+
+    .alert_message.lg {
+    text-align: center;
+    }
+    /*  End return message */
