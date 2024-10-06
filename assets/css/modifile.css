@@ -1,0 +1,355 @@
+/**
+* Project Name: Chaha Eye Hospital
+* Updated: Mar 24 2023 with Bootstrap v5.2.3* 
+* Author: Azua Kator Michael
+* License: Up coming
+*/
+
+/*--------------------------------------------------------------
+# Set main reusable colors and fonts using CSS variables
+# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    --color-default-night: #010425;
+    --primary: #0ab3abc2;
+    --secondary: #f85a40;
+  }
+  
+  /* Smooth scroll behavior */
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Additional functions */
+  :root {
+    --color-default: #010752;
+    --color-primary: #008374;
+    --color-primary-light: #6affebc9;
+    --color-secondary: #f85a40;
+    --color-nutral: #fff;
+
+    --transition: all 300ms ease;
+
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --font-width: 74%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8rem;
+    --card-border-radius-4: 2rem;
+    --card-border-radius-5: 5rem;
+  }
+
+/* ==========================================================
+=============== Generals ====================================
+=============================================================*/
+
+.nav_items {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav_profile {
+    position: relative;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+nav button {
+    display: inline-block;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;   
+}
+
+/* nav button {
+    display: none;
+} */
+
+/* Signup-login_part ============================ */
+
+.login_part_text {
+    background: var(--color-primary);
+    color: #fff;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    justify-content: center;
+}
+
+.login_part_form {
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.login_part_text_iner {
+    margin: 45px;
+    align-content: center;
+    padding-top: 2rem;
+    justify-content: center;
+}
+
+.login_part_form_iner {
+    margin: 45px;
+    align-content: center;
+    padding-top: 2rem;
+    justify-content: center;
+}
+
+.login_part_text_iner h2 {
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.login_part_text_iner p {
+    padding-bottom: 2rem;
+}
+
+.login_part_text_iner a {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+}
+
+.login_part_text_iner a:hover{
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: 1 solid #9b210e;
+}
+
+.signup_part_text {
+    background: var(--color-primary);
+    color: #fff;
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.signup_part_text_iner {
+    margin: 45px;
+    align-content: center;
+    padding-top: 5rem;
+    justify-content: center;
+}
+
+.signup_part_text_iner h2 {
+    padding-bottom: 2rem;
+}
+
+.signup_part_form h3 {
+    margin-top: 2rem;
+}
+.signup_part_form  {
+    margin-bottom: 2rem;
+}
+
+.signup_part_text_iner p {
+    padding-bottom: 5rem;
+}
+
+.signup_part_text_iner a {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+}
+
+.signup_part_text_iner a:hover{
+    color: #fff;
+    background-color: var(--color-primary);
+}
+.alert_message {
+    /* background: crimson; */
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.alert_message.error {
+    background: crimson;
+    color: #fff;
+}
+
+.alert_message.success {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.alert_message.lg {
+    text-align: center;
+}
+
+.form {
+    padding: 25px 30px;
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .name-details {
+    display: flex;
+}
+
+form .name-details .field:first-child {
+    margin-right: 10px;
+}
+
+form .name-details .field:last-child {
+    margin-left: 10px;
+}
+
+.form form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form form .image input {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.form form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #333;
+    color: #f6f6f6;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.form form .button input:hover {
+    background: #009d8b;
+    color: #fff;
+}
+
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form form .field .active i::before { 
+    content: "\f5ff";
+}
+/* ======= End signUp-login part */
+
+/* ==========================================================
+=============== Medial Queries for Medium Divices ===========
+=============================================================*/
+
+@media screen and (max-width: 1024px) {
+    nav button {
+        display: inline-block;
+        font-size: 2rem;
+        background: transparent;
+        color: #000;
+        cursor: pointer;
+        position: relative;
+       
+    }
+
+    nav button#hide_nav {
+        display: none;
+    }
+
+    .nav_items {
+        display: none;
+    }
+    .nav_items li {
+        animation: animateDropdown 1s 0s ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+    .nav_items li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+    .nav_items li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+    .nav_items li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+    .nav_items li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    /* nav dropdown animation */
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX('90deg');
+        }
+       100% {
+            transform: rotateX('0deg');
+            opacity: 1;
+        }
+    }
+    
+}
+
+/* ==========================================================
+=============== Medial Queries for smaller Divices ===========
+=============================================================*/
+@media screen and (max-width: 600px) {
+
+/* navbar section */
+
+    .navbar a h1 {
+        font-size: 1.5rem;
+    }
+    .navbar a h1 i {
+       display: none;
+    }
+
+    nav button {
+        display: inline-block;
+        font-size: 1.5rem;
+        background: transparent;
+        color: #000;
+        cursor: pointer;
+        position: relative;
+    }
+}
+
